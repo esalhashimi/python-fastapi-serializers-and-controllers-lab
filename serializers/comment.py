@@ -1,5 +1,3 @@
-# serializers/comment.py
-
 from pydantic import BaseModel
 
 class CommentSchema(BaseModel):
@@ -9,14 +7,14 @@ class CommentSchema(BaseModel):
   class Config:
     orm_mode = True
 
-class CreateCommentSchema(BaseModel):
-  
+
+class CommentCreateSchema(BaseModel):
   content: str
 
   class Config:
     orm_mode = True
 
-class UpdateCommentSchema(BaseModel):
+class CommentUpdateSchema(BaseModel):
   content: str
 
   class Config:
